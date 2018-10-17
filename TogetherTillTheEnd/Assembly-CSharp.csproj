@@ -54,27 +54,28 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\HealthHUD.cs" />
+     <Compile Include="Assets\Scripts\Mage Scripts\Mage.cs" />
      <Compile Include="Assets\Scripts\Mage Scripts\MageMeleeAtk.cs" />
      <Compile Include="Assets\Scripts\Mage Scripts\MageShield.cs" />
      <Compile Include="Assets\Scripts\Mage Scripts\MageSpell.cs" />
-     <Compile Include="Assets\Scripts\Mage Scripts\PlayerTwo.cs" />
      <Compile Include="Assets\Scripts\Mage Scripts\TeleportShadow.cs" />
-     <Compile Include="Assets\Scripts\PlayerOne.cs" />
      <Compile Include="Assets\Scripts\PowerUp\MageMeleePowerUp.cs" />
      <Compile Include="Assets\Scripts\PowerUp\MageRangePowerUp.cs" />
      <Compile Include="Assets\Scripts\PowerUp\MageShieldPowerUp.cs" />
      <Compile Include="Assets\Scripts\PowerUp\MageTeleportPowerUp.cs" />
+     <Compile Include="Assets\Scripts\SharedCamera.cs" />
+     <Compile Include="Assets\Scripts\Warrior.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/TheWrathLaptop/Desktop/TogetherTillTheEnd/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/TheWrathLaptop/Documents/GitHub/TogetherTillTheEnd/TogetherTillTheEnd/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/TheWrathLaptop/Desktop/TogetherTillTheEnd/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/TheWrathLaptop/Documents/GitHub/TogetherTillTheEnd/TogetherTillTheEnd/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/TheWrathLaptop/Desktop/TogetherTillTheEnd/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/TheWrathLaptop/Documents/GitHub/TogetherTillTheEnd/TogetherTillTheEnd/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/TheWrathLaptop/Desktop/TogetherTillTheEnd/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/TheWrathLaptop/Documents/GitHub/TogetherTillTheEnd/TogetherTillTheEnd/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

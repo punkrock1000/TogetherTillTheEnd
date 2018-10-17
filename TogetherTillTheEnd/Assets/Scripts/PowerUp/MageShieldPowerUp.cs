@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class MageShieldPowerUp : MonoBehaviour {
 
-    public PlayerTwo playerTwo;
+    public Mage mage;
 
     void Start()
     {
         GameObject tempPlayer = GameObject.Find("Mage");
-        playerTwo = tempPlayer.GetComponent<PlayerTwo>();
+        mage = tempPlayer.GetComponent<Mage>();
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "PlayerTwo")
         {
-            playerTwo.hasShield = true;
+            mage.hasShield = true;
             Destroy(gameObject);
         }
 

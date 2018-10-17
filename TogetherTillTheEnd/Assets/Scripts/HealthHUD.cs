@@ -12,8 +12,8 @@ public class HealthHUD : MonoBehaviour
     GameObject health2;
     GameObject health3;
 
-    PlayerOne playerOne;
-    PlayerTwo playerTwo;
+    Warrior playerOne;
+    Mage playerTwo;
 
     void Start ()
     {
@@ -24,12 +24,12 @@ public class HealthHUD : MonoBehaviour
         if(playerNum == 1)
         {
             GameObject playerObject = GameObject.Find("Warrior");
-            playerOne = playerObject.GetComponent<PlayerOne>();
+            playerOne = playerObject.GetComponent<Warrior>();
         }
         else
         {
             GameObject playerObject = GameObject.Find("Mage");
-            playerTwo = playerObject.GetComponent<PlayerTwo>();
+            playerTwo = playerObject.GetComponent<Mage>();
         }
         
     }
