@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e49501325042bac40abfa38cd41f9dee
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - RngAtk: {fileID: 1522496290244328, guid: f5fb86a237989ca4cac828aed62b1c59, type: 2}
+  - MeleeAtk: {fileID: 1602320734997832, guid: 719f39b7ede4fa64f96536a5f543c3f2, type: 2}
+  - tpShadow: {fileID: 1593422796455894, guid: cc2bc13d3242d85438564fcf30807db8, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
