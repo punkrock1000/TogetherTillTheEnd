@@ -16,8 +16,6 @@ public class SharedCamera : MonoBehaviour
     private float zoomSpeed = 1.5f;
 
     [SerializeField]
-    public float cameraBoundariesOffset = 2.0f;
-    [SerializeField]
     public float boundariesOffset = 2.0f;
 
     private bool dezoomed = false;
