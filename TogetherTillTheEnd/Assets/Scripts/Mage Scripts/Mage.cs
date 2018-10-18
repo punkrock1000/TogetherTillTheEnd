@@ -2,29 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mage : MonoBehaviour //MAGE
+public class Mage : BasePlayer //MAGE
 {
-    //Gestion Movement
-    float moveSpeed = 5.5f;
-    bool isLookingRight = true;
-
-    //Gestion Life
-    public int health = 3;
-    bool isDead = false;
-    float invincibilityFrames = 0.0f;
-
-    SpriteRenderer spriteRenderer;
-
-    //Gestion Jump
-    public float jumpForce = 550.0f;
-    bool CanJump = true;
-
-    //Gestion Abilities
-    public GameObject RngAtk;
-    public GameObject MeleeAtk;
-    public bool hasTPAbility = false;
-    public bool hasRangeAtk = false;
-    public bool hasMeleeAtk = false;
     public bool hasShield = false;
     bool shieldActive = false;
     public GameObject tpShadow;
@@ -34,66 +13,54 @@ public class Mage : MonoBehaviour //MAGE
     float TIME_BETWEEN_SHOTS = 0.3f;
     float shotTimer = 0.0f;
 
-    //External Refrences
-    Rigidbody2D rigidBody2D;
-    Transform spriteChild;
-
-    void Start()
+    public override void Start()
     {
-        rigidBody2D = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        base.Start();
         //spriteChild = transform.Find("Player1");
     }
 
-    void Update()
+    public override void Update()
     {
-        invincibilityFrames -= Time.deltaTime;
+        base.Update();
         shotTimer -= Time.deltaTime;
-
-        if (!isDead)
-        {
-            GestionInput();
-        }
-
     }
 
-
-    private void GestionInput()
+    public override void GestionInput()
     {
-        if (Input.GetButton("LeftPlay2"))
+        if (Input.GetButton("LeftPlay2") && !sharedCam.PlayerReachedLeftBoundary(transform.position.x))
         {
             isLookingRight = false;
-            transform.Translate(-Vector2.right * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
             //FaceDirection(-Vector2.right);
         }
-        if (Input.GetButton("RightPlay2"))
+        if (Input.GetButton("RightPlay2") && !sharedCam.PlayerReachedRightBoundary(transform.position.x))
         {
             isLookingRight = true;
             transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
             //FaceDirection(Vector2.right);
         }
 
-        if (Input.GetAxis("HorizontalJoystick2") > 0)
+        if (Input.GetAxis("HorizontalJoystick2") > 0 && !sharedCam.PlayerReachedLeftBoundary(transform.position.x))
         {
             isLookingRight = true;
             transform.Translate(Vector2.right * Input.GetAxis("HorizontalJoystick2") * moveSpeed * Time.deltaTime);
             //FaceDirection(Vector2.right);
         }
 
-        if (Input.GetAxis("HorizontalJoystick2") < 0)
+        if (Input.GetAxis("HorizontalJoystick2") < 0 && !sharedCam.PlayerReachedRightBoundary(transform.position.x))
         {
             isLookingRight = false;
             transform.Translate(Vector2.right * Input.GetAxis("HorizontalJoystick2") * moveSpeed * Time.deltaTime);
             //FaceDirection(Vector2.left);
         }
 
-        if (Input.GetButtonDown("JumpPlay2") && CanJump)
+        if (Input.GetButtonDown("JumpPlay2") && CanJump == 1)
         {
-            CanJump = false;
+            CanJump = 0;
             rigidBody2D.AddForce(Vector2.up * jumpForce);
         }
 
-        if (Input.GetButtonDown("TPAbilityPlay2") && hasTPAbility)
+        if (Input.GetButtonDown("TPAbilityPlay2") && hasAbility)
         {
             Teleport();
         }
@@ -136,7 +103,7 @@ public class Mage : MonoBehaviour //MAGE
         {
             if (!(shieldActive && !IsPhysical))    //If the atk is not physical and the shild is active, then dmg block
             {
-                StartCoroutine(setInvinsibility(2.0f));
+                StartCoroutine(SetInvicibility(2.0f));
 
                 health -= nbOfDmg;
                 if (health <= 0)
@@ -146,14 +113,6 @@ public class Mage : MonoBehaviour //MAGE
                 }
             }
         }
-    }
-
-    IEnumerator setInvinsibility(float time)
-    {
-        invincibilityFrames = time;
-        spriteRenderer.color = new Color(1f, 1f, 1f, .5f);
-        yield return new WaitForSeconds(time);
-        spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
     }
 
     IEnumerator SpawnShield()
@@ -168,7 +127,7 @@ public class Mage : MonoBehaviour //MAGE
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground" || col.gameObject.tag == "PlayerOne")
-            CanJump = true;
+            CanJump = 1;
     }
 
     void Teleport() //Not fully working
@@ -176,10 +135,4 @@ public class Mage : MonoBehaviour //MAGE
         transform.position = new Vector3(transform.position.x + 5.0f, transform.position.y, transform.position.z); //Simple Teleport
         //Instantiate(tpShadow, new Vector3(transform.position.x + 5.0f, transform.position.y, transform.position.z), transform.rotation); //Teleport Using Shadow
     }
-
-    /*private void FaceDirection(Vector2 direction)
-    {
-        Quaternion rotation3D = direction == Vector2.right ? Quaternion.LookRotation(Vector3.forward) : Quaternion.LookRotation(Vector3.back);
-        spriteChild.rotation = rotation3D;
-    }*/
 }

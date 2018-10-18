@@ -2,78 +2,55 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Warrior : MonoBehaviour // WARRIOR
+public class Warrior : BasePlayer // WARRIOR
 {
-    //Gestion Movement
-    float moveSpeed = 5.5f;
-    bool isLookingRight = true;
-
-    //Gestion Life
-    public int health = 3;
-    bool isDead = false;
-    float invincibilityFrames = 0.0f;
-
-    SpriteRenderer spriteRenderer;
-
     //Gestion Jump
-    public float jumpForce = 550.0f;
-    int CanJump = 1;
     float secondJumpTimer;
 
     //Abilities
     public bool HasDoubleJumpAbility;
 
-    //External Refrences
-    Rigidbody2D rigidBody2D;
-    Transform spriteChild;
-
-    void Start()
+    public override void Start()
     {
-        rigidBody2D = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        base.Start();
         //spriteChild = transform.Find("Player1");
     }
 
-    void Update()
+    public override void Update()
     {
-        invincibilityFrames -= Time.deltaTime;
-
+        base.Update();
         if(!isDead)
         {
             if (CanJump == 1 && HasDoubleJumpAbility)
                 secondJumpTimer -= Time.deltaTime;
             else
                 secondJumpTimer = 0.2f;
-
-            GestionInput();
         }
-        
     }
 
-
-    private void GestionInput()
+    public override void GestionInput()
     {
-        if (Input.GetButton("LeftPlay1"))
+        if (Input.GetButton("LeftPlay1") && !sharedCam.PlayerReachedLeftBoundary(transform.position.x))
         {
             isLookingRight = false;
-            transform.Translate(-Vector2.right * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
             //FaceDirection(-Vector2.right);
         }
-        if (Input.GetButton("RightPlay1"))
+        if (Input.GetButton("RightPlay1") && !sharedCam.PlayerReachedRightBoundary(transform.position.x))
         {
             isLookingRight = true;
             transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
             //FaceDirection(Vector2.right);
         }
 
-        if (Input.GetAxis("HorizontalJoystick1") > 0)
+        if (Input.GetAxis("HorizontalJoystick1") > 0 && !sharedCam.PlayerReachedLeftBoundary(transform.position.x))
         {
             isLookingRight = false;
             transform.Translate(Vector2.right * Input.GetAxis("HorizontalJoystick1") * moveSpeed * Time.deltaTime);
             //FaceDirection(Vector2.right);
         }
 
-        if (Input.GetAxis("HorizontalJoystick1") < 0)
+        if (Input.GetAxis("HorizontalJoystick1") < 0 && !sharedCam.PlayerReachedRightBoundary(transform.position.x))
         {
             isLookingRight = true;
             transform.Translate(Vector2.right * Input.GetAxis("HorizontalJoystick1") * moveSpeed * Time.deltaTime);
@@ -119,7 +96,7 @@ public class Warrior : MonoBehaviour // WARRIOR
     {
         if(invincibilityFrames <= 0 && true) // "true" will be replace by shield check later
         {
-            StartCoroutine(setInvinsibility(1.5f));
+            StartCoroutine(SetInvicibility(1.5f));
             
             health -= nbOfDmg;
             if (health <= 0)
@@ -129,18 +106,4 @@ public class Warrior : MonoBehaviour // WARRIOR
             }
         }
     }
-
-    IEnumerator setInvinsibility(float time)
-    {
-        invincibilityFrames = time;
-        spriteRenderer.color = new Color(1f, 1f, 1f, .5f);
-        yield return new WaitForSeconds(time);
-        spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
-    }
-
-    /*private void FaceDirection(Vector2 direction)
-    {
-        Quaternion rotation3D = direction == Vector2.right ? Quaternion.LookRotation(Vector3.forward) : Quaternion.LookRotation(Vector3.back);
-        spriteChild.rotation = rotation3D;
-    }*/
 }

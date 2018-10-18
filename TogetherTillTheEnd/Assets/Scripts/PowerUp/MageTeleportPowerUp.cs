@@ -16,7 +16,7 @@ public class MageTeleportPowerUp : MonoBehaviour {
     {
         if (col.gameObject.tag == "PlayerTwo")
         {
-            playerTwo.hasTPAbility = true;
+            playerTwo.hasAbility = true;
             Destroy(gameObject);
         }
 
