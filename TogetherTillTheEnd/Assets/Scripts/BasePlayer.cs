@@ -13,7 +13,7 @@ public abstract class BasePlayer : MonoBehaviour
     //Gestion Abilities
     public GameObject RngAtk;
     public GameObject MeleeAtk;
-    public bool hasAbility = false;
+    public bool hasSpecialAbility = false;
     public bool hasRangeAtk = false;
     public bool hasMeleeAtk = false;
 
@@ -31,7 +31,6 @@ public abstract class BasePlayer : MonoBehaviour
     //External Refrences
     protected Rigidbody2D rigidBody2D;
     protected Transform spriteChild;
-    protected Transform groundCheck;
     protected SpriteRenderer spriteRenderer;
 
     protected SharedCamera sharedCam;
@@ -60,11 +59,7 @@ public abstract class BasePlayer : MonoBehaviour
         spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
     }
 
-    /*private void FaceDirection(Vector2 direction)
-    {
-        Quaternion rotation3D = direction == Vector2.right ? Quaternion.LookRotation(Vector3.forward) : Quaternion.LookRotation(Vector3.back);
-        spriteChild.rotation = rotation3D;
-    }*/
+    
 
     public abstract void GestionInput();
 }
