@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4080025894347620}
   - component: {fileID: 212050028672233476}
   - component: {fileID: 70458076017236758}
-  - component: {fileID: 114451297022970164}
   - component: {fileID: 50212723545843124}
   m_Layer: 8
   m_Name: Warrior
@@ -78,20 +77,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.56, y: 1.15}
   m_Direction: 0
---- !u!114 &114451297022970164
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1191745966469528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 617da3ed59264d34ea26271dccdb03a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  jumpForce: 550
-  HasDoubleJumpAbility: 1
 --- !u!212 &212050028672233476
 SpriteRenderer:
   m_ObjectHideFlags: 1
