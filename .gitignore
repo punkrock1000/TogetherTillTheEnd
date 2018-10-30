@@ -6,3 +6,7 @@ Temp
 *.userprefs
 *.csprog
 *.orig
+*.unityproj
+*.pidb
+
+!*.*meta
