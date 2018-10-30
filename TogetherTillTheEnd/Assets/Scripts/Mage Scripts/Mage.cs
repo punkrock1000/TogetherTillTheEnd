@@ -118,9 +118,7 @@ public class Mage : BasePlayer //MAGE
     void UpdateAnimator()
     {
         if(transform.position.y < previousY)
-            animator.SetBool("IsFalling", true);
-        else
-            animator.SetBool("IsFalling", false);
+            animator.SetBool("IsFalling", true);            
 
         animator.SetBool("IsRunning", IsRunning);
         animator.SetBool("IsJumping", IsJumping);
@@ -172,8 +170,12 @@ public class Mage : BasePlayer //MAGE
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Ground" || col.gameObject.tag == "PlayerOne")
+        if (col.gameObject.tag == "Ground" || col.gameObject.tag == "PlayerOne" || col.gameObject.tag == "Monster")
+        {
             CanJump = 1;
+            animator.SetBool("IsFalling", false);
+        }
+            
     }
 
     private void FaceDirection(Vector2 direction)
