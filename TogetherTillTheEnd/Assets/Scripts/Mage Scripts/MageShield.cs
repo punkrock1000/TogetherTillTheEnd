@@ -17,5 +17,4 @@ public class MageShield : MonoBehaviour
     {
         this.transform.position = PlayerTwo.transform.position;
     }
-
 }

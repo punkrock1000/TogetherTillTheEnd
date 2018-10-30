@@ -214,22 +214,6 @@ InputManager:
     axis: 1
     joyNum: 0
   - serializedVersion: 3
-    m_Name: TPAbilityPlay1
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: q
-    altNegativeButton: 
-    altPositiveButton: joystick 1 button 5
-    gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
-    invert: 1
-    type: 2
-    axis: 1
-    joyNum: 0
-  - serializedVersion: 3
     m_Name: MageRangeAtk
     descriptiveName: 
     descriptiveNegativeName: 
@@ -237,54 +221,6 @@ InputManager:
     positiveButton: p
     altNegativeButton: 
     altPositiveButton: joystick 2 button 2
-    gravity: 3
-    dead: 0.19
-    sensitivity: 3
-    snap: 1
-    invert: 0
-    type: 0
-    axis: 0
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: WarriorRangeAtk
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: l
-    altNegativeButton: 
-    altPositiveButton: joystick 1 button 2
-    gravity: 3
-    dead: 0.19
-    sensitivity: 3
-    snap: 1
-    invert: 0
-    type: 0
-    axis: 0
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: WarriorMeleeAtk
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: k
-    altNegativeButton: 
-    altPositiveButton: joystick 1 button 2
-    gravity: 3
-    dead: 0.19
-    sensitivity: 3
-    snap: 1
-    invert: 0
-    type: 0
-    axis: 0
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: WarriorShield
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: j
-    altNegativeButton: 
-    altPositiveButton: joystick 1 button 2
     gravity: 3
     dead: 0.19
     sensitivity: 3
@@ -326,7 +262,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: TestingButton1
+    m_Name: TestingButton
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
