@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114932705771121862}
   - component: {fileID: 61008756015237350}
   m_Layer: 0
-  m_Name: powerUp2
+  m_Name: WarriorShieldAbility
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

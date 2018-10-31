@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114228895643033696}
   - component: {fileID: 61081590356513750}
   m_Layer: 0
-  m_Name: powerUp4
+  m_Name: WarriorMeleeAbility
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
