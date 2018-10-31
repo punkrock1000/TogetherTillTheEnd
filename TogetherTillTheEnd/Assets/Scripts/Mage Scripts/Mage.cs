@@ -20,6 +20,8 @@ public class Mage : BasePlayer //MAGE
     float TIME_BETWEEN_SHOTS = 0.3f;
     float shotTimer = 0.0f;
 
+    private float deltaTolerance = -0.003f;
+
     public override void Start()
     {
         base.Start();
@@ -117,8 +119,10 @@ public class Mage : BasePlayer //MAGE
 
     void UpdateAnimator()
     {
-        if(transform.position.y < previousY)
-            animator.SetBool("IsFalling", true);            
+        if (transform.position.y - previousY < deltaTolerance)
+        {
+            animator.SetBool("IsFalling", true);
+        }
 
         animator.SetBool("IsRunning", IsRunning);
         animator.SetBool("IsJumping", IsJumping);
@@ -175,7 +179,6 @@ public class Mage : BasePlayer //MAGE
             CanJump = 1;
             animator.SetBool("IsFalling", false);
         }
-            
     }
 
     private void FaceDirection(Vector2 direction)
