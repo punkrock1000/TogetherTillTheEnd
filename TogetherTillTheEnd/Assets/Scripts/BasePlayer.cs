@@ -28,6 +28,9 @@ public abstract class BasePlayer : MonoBehaviour
     protected float jumpForce = 550.0f;
     protected int CanJump = 1;
 
+    //Animation Transition
+    protected float deltaTolerance = -0.01f;
+
     //External Refrences
     protected Rigidbody2D rigidBody2D;
     protected Transform spriteChild;
