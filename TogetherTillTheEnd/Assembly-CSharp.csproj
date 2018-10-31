@@ -77,8 +77,17 @@
     <Compile Include="Assets\Scripts\PowerUp\MageRangePowerUp.cs" />
     <Compile Include="Assets\Scripts\PowerUp\MageShieldPowerUp.cs" />
     <Compile Include="Assets\Scripts\PowerUp\MageTeleportPowerUp.cs" />
+    <Compile Include="Assets\Scripts\PowerUp\WarriorBerserkPowerUp.cs" />
+    <Compile Include="Assets\Scripts\PowerUp\WarriorDoubleJumpPowerUp.cs" />
+    <Compile Include="Assets\Scripts\PowerUp\WarriorMeleePowerUp.cs" />
+    <Compile Include="Assets\Scripts\PowerUp\WarriorRangePowerUp.cs" />
+    <Compile Include="Assets\Scripts\PowerUp\WarriorShieldPowerUp.cs" />
     <Compile Include="Assets\Scripts\SharedCamera.cs" />
-    <Compile Include="Assets\Scripts\Warrior.cs" />
+    <Compile Include="Assets\Scripts\Warrior Scripts\Warrior.cs" />
+    <Compile Include="Assets\Scripts\Warrior Scripts\WarriorBerserk.cs" />
+    <Compile Include="Assets\Scripts\Warrior Scripts\WarriorMeleeAtk.cs" />
+    <Compile Include="Assets\Scripts\Warrior Scripts\WarriorRangeAtk.cs" />
+    <Compile Include="Assets\Scripts\Warrior Scripts\WarriorShield.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Antoine/Documents/UnityProjects/TogetherTillTheEnd/TogetherTillTheEnd/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
