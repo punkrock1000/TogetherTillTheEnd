@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Activators_and_Activated\AttackActivator.cs" />
     <Compile Include="Assets\Scripts\Activators_and_Activated\ContactActivator.cs" />
     <Compile Include="Assets\Scripts\BasePlayer.cs" />
+    <Compile Include="Assets\Scripts\FollowingBackGround.cs" />
     <Compile Include="Assets\Scripts\HealthHUD.cs" />
     <Compile Include="Assets\Scripts\Mage Scripts\Mage.cs" />
     <Compile Include="Assets\Scripts\Mage Scripts\MageMeleeAtk.cs" />
