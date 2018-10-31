@@ -11,7 +11,7 @@ public class WarriorRangeAtk : MonoBehaviour {
         time -= Time.deltaTime;
         if (time <= 0)
             Destroy(gameObject);
-        transform.Translate(Vector2.right * 10.0f * Time.deltaTime);
+        transform.Translate(Vector2.right * 20.0f * Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D col)    //For now deletes on any hit

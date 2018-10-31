@@ -130,26 +130,12 @@ public class Warrior : BasePlayer // WARRIOR
 
         if (Input.GetButton("WarriorRangeAtk") && hasRangeAtk && shotTimer <= 0)
         {
-            shotTimer = TIME_BETWEEN_SHOTS;
-            Bow = true;     
-          
-                if (isLookingRight)
-                    Instantiate(RngAtk, new Vector3(transform.position.x + 1.0f, transform.position.y, transform.position.z), transform.rotation);
-                else
-                    Instantiate(RngAtk, new Vector3(transform.position.x - 1.0f, transform.position.y, transform.position.z), transform.rotation); 
-
+            StartCoroutine(FireArrow());
         }
 
         if (Input.GetButtonDown("WarriorMeleeAtk") && hasMeleeAtk && shotTimer <= 0)
         {
-            shotTimer = TIME_BETWEEN_SHOTS;
-            Sword = true;
-            if (isLookingRight)
-                Instantiate(MeleeAtk, new Vector3(transform.position.x + 1.0f, transform.position.y, transform.position.z), transform.rotation);
-            else
-                Instantiate(MeleeAtk, new Vector3(transform.position.x - 1.0f, transform.position.y, transform.position.z), transform.rotation);
-         
-
+            StartCoroutine(SpawnMeleeAtk());
         }
 
     }
@@ -200,6 +186,27 @@ public class Warrior : BasePlayer // WARRIOR
         yield return new WaitForSeconds(2.0f);
         shieldActive = false;
         Destroy(tempShield);
+    }
+
+    IEnumerator SpawnMeleeAtk()
+    {
+        Sword = true;
+        yield return new WaitForSeconds(.3f);
+        if (isLookingRight)
+            Instantiate(MeleeAtk, new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z), transform.rotation);
+        else
+            Instantiate(MeleeAtk, new Vector3(transform.position.x - 0.5f, transform.position.y, transform.position.z), transform.rotation * Quaternion.Euler(0, 0, 180));
+    }
+
+    IEnumerator FireArrow()
+    {
+        shotTimer = TIME_BETWEEN_SHOTS;
+        Bow = true;
+        yield return new WaitForSeconds(0.5f);
+        if (isLookingRight)
+            Instantiate(RngAtk, new Vector3(transform.position.x + 1.0f, transform.position.y + 0.2f, transform.position.z), transform.rotation);
+        else
+            Instantiate(RngAtk, new Vector3(transform.position.x - 1.0f, transform.position.y + 0.2f, transform.position.z), transform.rotation);
     }
 
 
