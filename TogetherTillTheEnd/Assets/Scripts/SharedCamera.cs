@@ -9,14 +9,15 @@ public class SharedCamera : MonoBehaviour
     private GameObject mage;
 
     //private Vector2 minimumSize;
-
-    public Camera cam;
+    private Camera cam;
 
     [SerializeField]
     private float zoomSpeed = 1.5f;
 
     [SerializeField]
     public float boundariesOffset = 2.0f;
+
+    private float operativeOffset;
 
     private bool dezoomed = false;
 
@@ -37,6 +38,10 @@ public class SharedCamera : MonoBehaviour
         cam = GetComponent<Camera>();
 
         smallOrthographicSize = cam.orthographicSize;
+
+        operativeOffset = boundariesOffset - 0.5f;
+        if (operativeOffset < 0)
+            operativeOffset = 0f;
     }
 
     // Update is called once per frame
@@ -76,7 +81,7 @@ public class SharedCamera : MonoBehaviour
 
     public float GetCameraRightBoundary()
     {
-        return transform.position.x + (cam.orthographicSize * cam.aspect) - boundariesOffset;
+        return transform.position.x + (cam.orthographicSize * cam.aspect) - operativeOffset;
     }
 
     public bool PlayerReachedLeftBoundary(float playerXPos)
@@ -86,7 +91,7 @@ public class SharedCamera : MonoBehaviour
 
     public float GetCameraLeftBoundary()
     {
-        return transform.position.x - (cam.orthographicSize * cam.aspect) + boundariesOffset;
+        return transform.position.x - (cam.orthographicSize * cam.aspect) + operativeOffset;
     }
 
     public bool AtTriggerDistancePlayers(float warriorXPos, float mageXPos)

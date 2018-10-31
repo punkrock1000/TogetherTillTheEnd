@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: c6311295148f9a54ba8f7b71c3785327
-=======
 guid: f3716b7a61f6c964a809aadb881f4329
->>>>>>> CharacterAnim-Mage
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -79,11 +75,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-<<<<<<< HEAD
-    spriteID: 00584eb382570f24585ccd3d959613ea
-=======
     spriteID: 00572b9c3d4e9f9409761f234cf9adf3
->>>>>>> CharacterAnim-Mage
     vertices: []
     indices: 
     edges: []
