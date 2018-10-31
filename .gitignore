@@ -1,0 +1,12 @@
+syntax: glob
+Library
+Temp
+*.pidb
+*.sln
+*.userprefs
+*.csprog
+*.orig
+*.unityproj
+*.pidb
+
+*.*meta
