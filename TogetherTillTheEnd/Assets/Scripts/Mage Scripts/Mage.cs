@@ -20,8 +20,6 @@ public class Mage : BasePlayer //MAGE
     float TIME_BETWEEN_SHOTS = 0.3f;
     float shotTimer = 0.0f;
 
-    private float deltaTolerance = -0.003f;
-
     public override void Start()
     {
         base.Start();

@@ -216,8 +216,8 @@ public class Warrior : BasePlayer // WARRIOR
         Bow = false;
         IsJumping = false;
 
-        if (transform.position.y < Oldyposition) {
-
+        if (transform.position.y - Oldyposition < deltaTolerance)
+        {
             IsFalling = true;
         }
     }
