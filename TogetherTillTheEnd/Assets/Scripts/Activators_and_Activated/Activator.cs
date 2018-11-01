@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Activator : MonoBehaviour {
+public abstract class Activator : MonoBehaviour {
 
     // boolean making sure both player cannot mess the state
     public bool triggered;
@@ -24,7 +24,7 @@ public class Activator : MonoBehaviour {
     protected float timeSinceActivated;
 
     // Use this for initialization
-    protected void Start()
+    virtual protected void Start()
     {
         triggered = false;
         multiActivator = false;
@@ -78,13 +78,6 @@ public class Activator : MonoBehaviour {
     }
 
     //collision Parameter, changes depending on the Activator SwitchTypes
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        
-    }
+    abstract protected void OnTriggerEnter2D(Collider2D collision);
+    abstract protected void OnTriggerExit2D(Collider2D collision);
 }

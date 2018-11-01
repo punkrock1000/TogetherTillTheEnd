@@ -10,36 +10,36 @@ public class ContactActivator : Activator
     List<GameObject> currentlyColliding;
 
     //how many player are triggering the switch
-    public int numbrOfPLayerTriggering;
+    public int nbrOfPlayerTriggering;
 
     // Use this for initialization
-    protected void Start()
+    override protected void Start()
     {
         base.Start();
-        numbrOfPLayerTriggering = 0;
+        nbrOfPlayerTriggering = 0;
         currentlyColliding = new List<GameObject>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    override protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Players"))
         {
             triggered = true;
-            numbrOfPLayerTriggering++;
+            nbrOfPlayerTriggering++;
             Notify(triggered);
             currentlyColliding.Add(collision.gameObject);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    override protected void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Players"))
         {
             currentlyColliding.Remove(collision.gameObject);
-            numbrOfPLayerTriggering--;
+            nbrOfPlayerTriggering--;
 
             //is there still a player close enough to activate the gate?
-            if (numbrOfPLayerTriggering == 0)
+            if (nbrOfPlayerTriggering == 0)
             {
                 triggered = false;
 

@@ -9,7 +9,7 @@ public class AttackActivator : Activator
     [SerializeField]
     string triggerType;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    override protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer(triggerType))
         {
@@ -18,7 +18,7 @@ public class AttackActivator : Activator
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    override protected void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer(triggerType))
         {
