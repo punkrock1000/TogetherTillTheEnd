@@ -29,7 +29,7 @@ public class Activable : MonoBehaviour {
     void Start() {
         initialPosition = transform.position;
         triggered = false;
-        intialToTriggered = (triggeredPosition - initialPosition).normalized;
+        intialToTriggered = (triggeredPosition).normalized;
 
         if (instancedActivator != null)
         {
