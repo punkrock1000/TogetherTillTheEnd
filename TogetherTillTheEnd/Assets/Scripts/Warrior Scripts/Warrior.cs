@@ -152,9 +152,13 @@ public class Warrior : BasePlayer // WARRIOR
             else
                 CanJump = 1;
         }
+        if(col.gameObject.tag == "Monster")
+        {
+            TakeDamage(1, false);
+        }
     }
 
-    void TakeDamage(int nbOfDmg, bool IsPhysical)
+    public void TakeDamage(int nbOfDmg, bool IsPhysical)
     {
         if (invincibilityFrames <= 0)
         {

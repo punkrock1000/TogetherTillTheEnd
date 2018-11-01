@@ -133,7 +133,7 @@ public class Mage : BasePlayer //MAGE
     }
 
 
-    void TakeDamage(int nbOfDmg, bool IsPhysical)
+    public void TakeDamage(int nbOfDmg, bool IsPhysical)
     {
         if (invincibilityFrames <= 0)
         {
@@ -172,10 +172,14 @@ public class Mage : BasePlayer //MAGE
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Ground" || col.gameObject.tag == "PlayerOne" || col.gameObject.tag == "Monster")
+        if (col.gameObject.tag == "Ground" || col.gameObject.tag == "PlayerOne")
         {
             CanJump = 1;
             animator.SetBool("IsFalling", false);
+        }
+        if (col.gameObject.tag == "Monster")
+        {
+            TakeDamage(1, true);
         }
     }
 
