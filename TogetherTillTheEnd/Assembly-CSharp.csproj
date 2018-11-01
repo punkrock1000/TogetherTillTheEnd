@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\FollowingBackGround.cs" />
     <Compile Include="Assets\Scripts\HealthHUD.cs" />
     <Compile Include="Assets\Scripts\JumpBox.cs" />
+    <Compile Include="Assets\Scripts\LevelGate.cs" />
     <Compile Include="Assets\Scripts\Mage Scripts\Mage.cs" />
     <Compile Include="Assets\Scripts\Mage Scripts\MageMeleeAtk.cs" />
     <Compile Include="Assets\Scripts\Mage Scripts\MageShield.cs" />

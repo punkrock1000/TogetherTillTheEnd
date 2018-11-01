@@ -67,6 +67,11 @@ public class Activable : MonoBehaviour {
     void triggerAction(bool aState)
     {
         triggered = aState;
+        Animator anim = GetComponent<Animator>();
+        if (anim != null)
+        {
+            anim.SetBool("triggered", aState);
+        }
     }
 
     //functions either checking the activator list to determine state
