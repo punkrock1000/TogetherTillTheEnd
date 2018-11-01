@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicMeleeEnemy : MonoBehaviour {
+public class BasicMeleeEnemy : MonoBehaviour
+{
     bool mBusy = false;
     [SerializeField]
     Transform mMage;
@@ -21,19 +22,22 @@ public class BasicMeleeEnemy : MonoBehaviour {
     bool jumping = false;
     float jumpForce = 7;
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         mAnimator = GetComponent<Animator>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (!mBusy && visible)
         {
             if (targetChoice())
             {
                 mTarget = mMage;
             }
-            else {
+            else
+            {
                 mTarget = mWarrior;
             }
             direction = (mTarget.position - transform.position);
@@ -41,27 +45,30 @@ public class BasicMeleeEnemy : MonoBehaviour {
             {
                 mBusy = true;
                 attack(direction);
+                mAnimator.SetBool("isRunning", false);
             }
             else
             {
                 direction = (direction.x < 0) ? Vector2.left : Vector2.right;
                 transform.Translate(direction * moveSpeed * Time.deltaTime, Space.World);
                 FaceDirection(direction);
+                mAnimator.SetBool("isRunning", true);
             }
 
         }
-	}
+    }
 
     bool targetChoice()
     {
         Vector2 mageDiff = mMage.transform.position - transform.position;
         Vector2 warrDiff = mWarrior.transform.position - transform.position;
 
-        if(mageDiff.magnitude < warrDiff.magnitude)
+        if (mageDiff.magnitude < warrDiff.magnitude)
         {
             return true;
         }
-        else {
+        else
+        {
             return false;
         }
     }
@@ -91,7 +98,7 @@ public class BasicMeleeEnemy : MonoBehaviour {
     {
         if (collision.gameObject.tag.Equals("EditorOnly") && !mBusy && !jumping)
         {
-            if((transform.position.y - mTarget.transform.position.y) < -.3 && direction.Equals(collision.gameObject.GetComponent<JumpBox>().GetDirection()))
+            if ((transform.position.y - mTarget.transform.position.y) < -.3 && direction.Equals(collision.gameObject.GetComponent<JumpBox>().GetDirection()))
             {
                 GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 jumping = true;

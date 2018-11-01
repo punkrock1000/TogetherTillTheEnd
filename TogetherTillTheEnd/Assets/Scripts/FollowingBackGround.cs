@@ -14,6 +14,6 @@ public class FollowingBackGround : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        transform.position = new Vector3(Cam.transform.position.x, Cam.transform.position.y,0);
+        transform.position = new Vector3(Cam.transform.position.x, Cam.transform.position.y - 2.0f,6);
 	}
 }

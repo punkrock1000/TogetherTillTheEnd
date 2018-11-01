@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/level1.unity
+- path: "C:/Users/TheWrathLaptop/Desktop/\xC9cole/TogetherTillTheEnd/TogetherTillTheEnd/Assets/Scenes/SampleScene.unity"
   isLoaded: 1
   isActive: 1
