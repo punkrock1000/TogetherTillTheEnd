@@ -37,13 +37,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1650867835927102}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.41, y: -1.57, z: 0}
-  m_LocalScale: {x: 0.97067684, y: 0.9011459, z: 2.443454}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -2.0147564, y: 0.93056643, z: -1.17}
+  m_LocalScale: {x: 0.089559324, y: 0.48568296, z: 2.443454}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!50 &50637423668117470
 Rigidbody2D:
   serializedVersion: 4
@@ -118,8 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c4e62154061774e88ee034a9c95dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMage: {fileID: 0}
-  mWarrior: {fileID: 0}
+  mMage: {fileID: 4107895456337528, guid: 5cdd4fd4c9079d143a943a661a4e3faa, type: 2}
+  mWarrior: {fileID: 4080025894347620, guid: 7e06e65f99d38e546a4adc6f6a67102d, type: 2}
   mProjectilePrefab: {fileID: 1541605679986036, guid: e219b533f5289f14dadba9f8bdb441cd,
     type: 2}
 --- !u!212 &212987683472874620

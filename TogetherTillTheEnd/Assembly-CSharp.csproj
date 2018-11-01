@@ -92,9 +92,12 @@
     <Compile Include="Assets\Scripts\Warrior Scripts\WarriorMeleeAtk.cs" />
     <Compile Include="Assets\Scripts\Warrior Scripts\WarriorRangeAtk.cs" />
     <Compile Include="Assets\Scripts\Warrior Scripts\WarriorShield.cs" />
-    <None Include="Assets\Sprites\graveyard_assets\Fantasy Environment and Animated Characters (Pixel Art) [free add-on]\Graphical\Characters\Characters Sizes to Slice.txt" />
-    <None Include="Assets\Sprites\graveyard_assets\Medieval_pixel_art_asset_FREE\pixel_snapping_README.txt" />
     <None Include="Assets\Sprites\graveyard_assets\Fantasy Environment and Animated Characters (Pixel Art) [free add-on]\Readme.txt" />
+    <None Include="Assets\Sprites\graveyard_assets\Fantasy Environment and Animated Characters (Pixel Art) [free add-on]\Graphical\Characters\Characters Sizes to Slice.txt" />
+    <None Include="Assets\Sprites\Fantasy Environment and Animated Characters (Pixel Art) [free add-on]\Readme.txt" />
+    <None Include="Assets\Sprites\graveyard_assets\Medieval_pixel_art_asset_FREE\pixel_snapping_README.txt" />
+    <None Include="Assets\Sprites\Fantasy Environment and Animated Characters (Pixel Art) [free add-on]\Graphical\Characters\Characters Sizes to Slice.txt" />
+    <None Include="Assets\Sprites\Medieval_pixel_art_asset_FREE\pixel_snapping_README.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Antoine/Documents/UnityProjects/TogetherTillTheEnd/TogetherTillTheEnd/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
