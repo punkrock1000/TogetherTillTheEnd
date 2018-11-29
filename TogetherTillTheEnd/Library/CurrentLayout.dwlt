@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 1771.6666
-    y: 92
+    x: 1814.6666
+    y: 169
     width: 1452
-    height: 735
+    height: 831
   m_ShowMode: 0
   m_Title: 
   m_RootView: {fileID: 4}
@@ -61,7 +61,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1452
-    height: 735
+    height: 831
   m_MinSize: {x: 100, y: 122}
   m_MaxSize: {x: 4000, y: 4022}
   m_ActualView: {fileID: 15}
@@ -87,11 +87,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1452
-    height: 735
+    height: 831
   m_MinSize: {x: 100, y: 122}
   m_MaxSize: {x: 4000, y: 4022}
   vertical: 0
-  controlID: 778
+  controlID: 31
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 46
+  controlID: 54
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 47
+  controlID: 55
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 95
+  controlID: 56
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -273,8 +273,8 @@ MonoBehaviour:
     y: 0
     width: 411
     height: 450
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -352,17 +352,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1771.6666
-    y: 114
+    x: 1814.6666
+    y: 191
     width: 1452
-    height: 713
+    height: 809
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
     - {fileID: 1107744493227146274, guid: 6a05d18e7af0a6c46846af0441eef3d4, type: 2}
     - {fileID: 1107667053522033162, guid: 1f7767c1eb672d0408735e211f9efbf8, type: 2}
-    - {fileID: 1107598727515000096, guid: a6faef61a350e1a4285d7690d6b1cf45, type: 2}
-    - {fileID: 1107170420199571112, guid: b9102edabc67e944691d2c0df9732866, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.9968421
       e01: 0
@@ -388,38 +386,6 @@ MonoBehaviour:
       e11: 0.9968421
       e12: 0
       e13: 208.41368
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.835097
-      e01: 0
-      e02: 0
-      e03: -26.754883
-      e10: 0
-      e11: 0.835097
-      e12: 0
-      e13: 212.90036
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.87200737
-      e01: 0
-      e02: 0
-      e03: -28.600342
-      e10: 0
-      e11: 0.87200737
-      e12: 0
-      e13: 223.02301
       e20: 0
       e21: 0
       e22: 1
@@ -547,29 +513,29 @@ MonoBehaviour:
     height: 429
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 36}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: e6fbffff0000000040420000
+    m_ExpandedIDs: e6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: LevelGate
-      m_OriginalName: LevelGate
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -1170
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 12}
     m_SearchString: 
   m_ExpandedScenes:
-  - level1
+  - Sample2
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -715,20 +681,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/Medieval_pixel_art_asset_FREE/Textures
+    - Assets/Audio
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites/Medieval_pixel_art_asset_FREE/Textures
+  - Assets/Audio
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Antoine\Documents\UnityProjects\TogetherTillTheEnd\TogetherTillTheEnd
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 493}
-    m_SelectedIDs: 762e0000
-    m_LastClickedID: 11894
-    m_ExpandedIDs: 00000000242a0000da2e00002e3100004a330000463600008a360000ac360000ba3c00002a4500002c4500002e45000030450000324500003445000036450000384500003a45000000ca9a3b
+    scrollPos: {x: 0, y: 95}
+    m_SelectedIDs: 2e330000
+    m_LastClickedID: 13102
+    m_ExpandedIDs: 00000000242a0000b82f000074320000b6340000da370000223800004a380000703e0000484500004a4500004c4500004e450000504500005245000054450000564500005845000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -756,7 +722,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000242a0000da2e00002e3100004a330000463600008a360000ac360000ba3c00002a4500002c4500002e45000030450000324500003445000036450000384500003a450000
+    m_ExpandedIDs: 00000000242a0000b82f000074320000b6340000da370000223800004a380000703e0000484500004a4500004c4500004e4500005045000052450000544500005645000058450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
